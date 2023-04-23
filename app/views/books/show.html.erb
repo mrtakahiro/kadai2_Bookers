@@ -3,10 +3,16 @@
   <%= flash[:alelt] %>
 </div>
 
-<h2>title</h2>
-<p><%= @book.title %></p>
+<P>
+</strong>Title: </strong>
+<span><%= @book.title %></span>
+</P>
 
-<h2>body</h2>
-<p><%= @book.body %></p>
-<%= link_to "編集", edit_book_path(@book.id) %>
-<%= link_to "削除", book_path(@book.id), method: :delete, "data-confirm" => "本当に削除しますか？" %>
+<P>
+<strong>body: </strong>
+<span><%= @book.body %></span>
+</P>
+
+<%= link_to "Edit", edit_book_path(@book.id) %>
+<nobr>|</nobr>
+<%= link_to "Back", :back %>
